@@ -59,6 +59,7 @@
   .nav-links {
     display: flex;
     gap: 30px;
+    margin: 0 auto 0 100px;
   }
   
   .nav-links li {
@@ -78,42 +79,85 @@
     color: #fefefe;
   }
   
+  .hire-nav-btn {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  
   /* ===================== HERO SECTION ===================== */
   .hero {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 60px 0;
+    padding: 80px 0;
     gap: 40px;
   }
   
   .hero-text {
     flex: 1 1 400px;
+    max-width: 600px;
   }
   
-  .hero-text h1 {
-    font-size: 3rem;
-    line-height: 1.2;
+  .intro-text {
+    color: #959595;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .name {
+    color: #fefefe;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .title-container {
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 3.2rem;
+    line-height: 1.1;
     font-weight: 700;
-    margin-bottom: 16px;
+    color: #fa6e00; /* Orange color */
   }
   
-  .hero-text p {
-    font-size: 1.1rem;
-    color: #cfcfcf;
-    margin-bottom: 24px;
+  .social-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(40, 40, 40, 0.8);
+    transition: background 0.3s;
+  }
+  
+  .social-icon:hover {
+    background: rgba(60, 60, 60, 0.8);
+  }
+  
+  .social-icon img {
+    width: 20px;
+    height: 20px;
   }
   
   .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 40px;
   }
   
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     font-size: 1rem;
     font-weight: 700;
     padding: 12px 24px;
@@ -129,33 +173,45 @@
   }
   
   .primary-btn:hover {
-    background: linear-gradient(129deg, #fda700 0%, #fd7900 100%);
-  }
-  
-  .secondary-btn {
-    background: #fff;
-    color: #000;
-  }
-  
-  .secondary-btn:hover {
-    background: #fd7900;
-    color: #fff;
+    background: #ff8a2c;
   }
   
   .outline-btn {
-    border: 2px solid #fa6e00;
-    color: #fa6e00;
+    border: 2px solid #333;
+    color: #959595;
     background: transparent;
   }
   
   .outline-btn:hover {
-    background: #fa6e00;
-    color: #fff;
+    border-color: #555;
+    color: #ddd;
   }
   
-  .btn-icon {
-    width: 20px;
-    height: 20px;
+  .stats {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #1a1a1a;
+    background: rgba(20, 20, 20, 0.5);
+    width: 100%;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    color: #fa6e00;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    color: #959595;
+    font-size: 0.9rem;
   }
   
   .hero-image {
@@ -165,59 +221,130 @@
     align-items: center;
   }
   
-  /* ===================== SERVICES SECTION ===================== */
-  .services {
-    padding: 60px 0;
-    text-align: center;
+  .hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
   }
-  
-  .services h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  
-  .section-subtitle {
-    color: #707070;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-  }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-  
-  .service-card {
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .service-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .service-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 16px;
-  }
-  
-  .service-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    color: #fefefe;
-  }
-  
-  .service-card p {
-    font-size: 0.95rem;
-    color: #cfcfcf;
-  }
-  
+
+ /* ===================== SERVICES SECTION ===================== */
+.services {
+  padding: 40px 0;
+  text-align: center;
+  background: #000;
+  position: relative;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.section-subtitle {
+  color: #707070;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Diagonal stripe patterns */
+.diagonal-stripe {
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 255, 0.8),
+    rgba(255, 0, 255, 0.8) 10px,
+    rgba(255, 0, 255, 0.5) 10px,
+    rgba(255, 0, 255, 0.5) 20px
+  );
+}
+
+.blue-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 136, 255, 0.8),
+    rgba(0, 136, 255, 0.8) 10px,
+    rgba(0, 136, 255, 0.5) 10px,
+    rgba(0, 136, 255, 0.5) 20px
+  );
+}
+
+.blue-edge {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #0088ff;
+  top: 0;
+}
+
+.blue-edge.left {
+  left: 0;
+}
+
+.blue-edge.right {
+  right: 0;
+}
+
+.pink-edge {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #ff00ff;
+  top: 0;
+}
+
+.pink-edge.left {
+  left: 0;
+}
+
+.pink-edge.right {
+  right: 0;
+}
+
+/* Service cards grid */
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.service-card {
+  background: #111;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  filter: brightness(0) saturate(100%) invert(65%) sepia(54%) saturate(1966%) hue-rotate(360deg) brightness(104%) contrast(106%);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #fda700;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
   /* ===================== ABOUT ME SECTION ===================== */
   .about {
     padding: 60px 0;
